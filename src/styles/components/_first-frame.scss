@@ -1,0 +1,69 @@
+.logo {
+	width: 166px;
+	height: 66px;
+	margin-bottom: 70px;
+
+	img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	@media (max-width: 425px) {
+		margin: 0 auto 65px;
+	}
+}
+
+.first-frame {
+	padding-top: 60px;
+	background: url('@/assets/images/first-frame-bg.png') no-repeat top right;
+	background-size: contain;
+	max-width: 1920px;
+	margin: 0 auto;
+	margin-bottom: 85px;
+
+	@media (max-width: 425px) {
+		margin-bottom: 45px;
+	}
+
+	&__info {
+		max-width: 500px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 40px 0;
+	}
+
+	&__title {
+		font-style: normal;
+		font-weight: 800;
+		font-size: 82px;
+		line-height: 80px;
+
+		@media (max-width: 768px) {
+			font-size: 60px;
+			line-height: 62px;
+		}
+	}
+
+	&__text {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 26px;
+		letter-spacing: -0.02em;
+
+		@media (max-width: 768px) {
+			font-size: 15px;
+			line-height: 24px;
+		}
+	}
+
+	&__btn {
+		padding: 19px 42px;
+		max-width: 286px;
+
+		@media (max-width: 435px) {
+			max-width: 100%;
+		}
+	}
+}
