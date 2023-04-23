@@ -7,6 +7,10 @@
 
 	&__title {
 		margin-bottom: 60px;
+
+		@media (max-width: 425px) {
+			margin-bottom: 50px;
+		}
 	}
 
 	&__list {

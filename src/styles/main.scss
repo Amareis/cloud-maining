@@ -20,6 +20,11 @@
 	font-size: 40px;
 	line-height: 48px;
 	text-align: center;
+
+	@media (max-width: 768px) {
+		font-size: 30px;
+		line-height: 34px;
+	}
 }
 
 .btn {
