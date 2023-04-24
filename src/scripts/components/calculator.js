@@ -22,7 +22,7 @@ secondRate.addEventListener('click', addClass)
 
 
 
-
+//range-slider
 
 
 noUiSlider.create(calculator, {
