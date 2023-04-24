@@ -1,4 +1,8 @@
 .wrapper {
 	background: #2F2F3D;
 	padding-bottom: 260px;
+
+	@media(max-width: 768px) {
+		padding-bottom: 25px;
+	}
 }
