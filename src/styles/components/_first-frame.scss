@@ -15,22 +15,64 @@
 
 .first-frame {
 	padding-top: 60px;
-	background: url('@/assets/images/first-frame-bg.png') no-repeat top right;
-	background-size: contain;
 	max-width: 1920px;
-	margin: 0 auto;
-	margin-bottom: 85px;
+	margin: 0 auto 85px ;
+	overflow-x: clip;
 
 	@media (max-width: 425px) {
 		margin-bottom: 45px;
 	}
 
 	&__info {
+		position: relative;
 		max-width: 500px;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
 		gap: 40px 0;
+		z-index: 3;
+	}
+
+	&__inner {
+		position: relative;
+	}
+
+	&__gradient {
+		position: absolute;
+		top: 0;
+		width: 400px;
+		height: 400px;
+		right: -80px;
+		background: linear-gradient(180deg, rgba(246, 247, 248, 0.3) 0%, rgba(119, 132, 255, 0.3) 100%);
+		filter: blur(100px);
+		background-size: contain;
+
+		@media(max-width: 610px) {
+			background: none;
+		}
+	}
+
+	&__bg {
+		position: absolute;
+		top: -135px;
+		right: -80px;
+		background-image: url('@/assets/images/first-frame-bg.png');
+		background-repeat: no-repeat;
+		background-position: 0 100px;
+		background-size: 600px;
+		width: 605px;
+		height: 605px;
+		z-index: 1;
+
+		@media(max-width: 975px) {
+			opacity: .5;
+		}
+
+		@media(max-width: 610px) {
+			top: -215px;
+			right: -410px;
+			opacity: .2;
+		}
 	}
 
 	&__title {

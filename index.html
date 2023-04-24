@@ -20,12 +20,17 @@
 				<div class="logo">
 					<img src="src/assets/images/logo.svg" alt="Logo">
 				</div>
-				<div class="first-frame__info">
-					<div class="first-frame__title">Облачный майнинг Bitcoin</div>
-					<div class="first-frame__text">Контракты с выплатами в самых популярных и надёжных криптовалютах, 100+
-						альткоинов, а также контракт с фиксированными выплатами в USDT.</div>
-					<div class="first-frame__btn btn">Расчитать доходность</div>
+				<div class="first-frame__inner">
+					<div class="first-frame__info">
+						<div class="first-frame__title">Облачный майнинг Bitcoin</div>
+						<div class="first-frame__text">Контракты с выплатами в самых популярных и надёжных криптовалютах, 100+
+							альткоинов, а также контракт с фиксированными выплатами в USDT.</div>
+						<div class="first-frame__btn btn">Расчитать доходность</div>
+					</div>
+					<div class="first-frame__gradient"></div>
+					<div class="first-frame__bg"></div>
 				</div>
+
 			</div>
 		</section>
 
@@ -48,22 +53,22 @@
 					<div class="calculator__frame">
 						<div class="calculator__invest-box">
 							<div class="calculator__invest-price-box">
-								<label class="calculator__invest-price-text" for="invest-price">Сумма инвестиций</label>
-								<input class="calculator__invest-price" type="number" id="invest-price">
+								<div class="calculator__invest-price-text" for="invest-price">Сумма инвестиций</div>
+								<div class="calculator__invest-price">9999</div>
 							</div>
-
+							<div class="calculator__equally">
+								<img src="/src/assets/images/equally.svg" alt="equally">
+							</div>
 							<div class="calculator__teraheshy-box">
-								<label class="calculator__teraheshy-text" for="teraheshy">Терахешы</label>
-								<input class="calculator__teraheshy" id="teraheshy">
+								<div class="calculator__teraheshy-text" for="teraheshy">Терахешы</div>
+								<div class="calculator__teraheshy" id="teraheshy">9</div>
 							</div>
 						</div>
-						<div class="calculator__range range ">
-							<input class="range__slider" type="range" min="0" max="9000" value="10" step="10">
-							<div class="range__thumb"></div>
-							<div class="range__progress"></div>
+						<div class="calculator__range calculator ">
+							<div id="m-slider"></div>
 						</div>
 						<div class="calculator__currency-rate">
-							<div class="calculator__current-rate">По текущему курсу</div>
+							<div class="calculator__current-rate active">По текущему курсу</div>
 							<div class="calculator__second-rate">Указать свой</div>
 						</div>
 						<div class="calculator__currency-price">
