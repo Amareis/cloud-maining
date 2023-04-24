@@ -57,20 +57,74 @@
 								<input class="calculator__teraheshy" id="teraheshy">
 							</div>
 						</div>
-						<div class="calculator__range">
-							<input type="range" min="0" max="9000" value="0" step="10">
+						<div class="calculator__range range ">
+							<input class="range__slider" type="range" min="0" max="9000" value="10" step="10">
+							<div class="range__thumb"></div>
+							<div class="range__progress"></div>
 						</div>
 						<div class="calculator__currency-rate">
-							<div class="calculator__current-rate"></div>
-							<div class="calculator__second-rate"></div>
+							<div class="calculator__current-rate">По текущему курсу</div>
+							<div class="calculator__second-rate">Указать свой</div>
 						</div>
 						<div class="calculator__currency-price">
-							<div class="calculator__first-currency"></div>
-							<div class="calculator__second-currency"></div>
+							<div class="calculator__first-currency">
+								<div class="calculator__currency-box">
+									<img src="/src/assets/images/dog-coin.svg" alt="coin-name">
+									<div class="calculator__currency">0,10$</div>
+								</div>
+								<div class="calculator__currency-name">DOGE</div>
+							</div>
+							<div class="calculator__second-currency">
+								<div class="calculator__currency-box">
+									<img src="/src/assets/images/LTS-coin.svg" alt="coin-name">
+									<div class="calculator__currency">92,50$</div>
+								</div>
+								<div class="calculator__currency-name">LTC</div>
+							</div>
 						</div>
 					</div>
-					<div class="calculator__report"></div>
-					<div class="calculator__price"></div>
+					<div class="calculator__report">
+						<div class="calculator__report-item">
+							<div class="calculator__report-title">Доход за день</div>
+							<div class="calculator__report-price-box">
+								<div class="calculator__report-price">$72,39</div>
+								<div class="calculator__report-procent">2,3%</div>
+							</div>
+						</div>
+						<div class="calculator__report-item">
+							<div class="calculator__report-title">Доход за квартал</div>
+							<div class="calculator__report-price-box">
+								<div class="calculator__report-price">$1 288,52</div>
+								<div class="calculator__report-procent">14,32%</div>
+							</div>
+						</div>
+						<div class="calculator__report-item">
+							<div class="calculator__report-title">Доход за год</div>
+							<div class="calculator__report-price-box">
+								<div class="calculator__report-price">$5 154,06</div>
+								<div class="calculator__report-procent">57,27%</div>
+							</div>
+						</div>
+					</div>
+					<div class="calculator__price">
+						<div class="calculator__price-box">
+							<div class="calculator__price-sum">
+								<div class="calculator__price-sum-title">Сумма платежа в USDT</div>
+								<div class="calculator__price-sum-box">
+									<div class="calculator__price-sum-count">8 991</div>
+									<img src="/src/assets/images/price-sum-1.svg" alt="icon">
+								</div>
+							</div>
+							<div class="calculator__price-sum">
+								<div class="calculator__price-sum-title">Обслуживание в месяц</div>
+								<div class="calculator__price-sum-box">
+									<div class="calculator__price-sum-count">63$</div>
+									<img src="/src/assets/images/price-sum-2.svg" alt="icon">
+								</div>
+							</div>
+						</div>
+						<div class="calculator__price-btn btn">Заключить контракт</div>
+					</div>
 				</form>
 				<div class="calculator__about calculator__about--bot">Этот прогноз является ориентировочным и не включает
 					перепродажу
@@ -92,7 +146,6 @@
 			</section>
 		</div>
 	</div>
-
 	<script src="src/scripts/main.js" type="module"></script>
 	<script src="src/scripts/pages/home.js" type="module"></script>
 </body>
