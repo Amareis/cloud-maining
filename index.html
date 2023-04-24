@@ -44,11 +44,34 @@
 				<div class="calculator__about">Просто укажите сумму инвестиций или количество единиц мощности
 					(терахешей)
 				</div>
-				<div class="calculator__inner">
-					<div class="calculator__frame"></div>
+				<form class="calculator__inner">
+					<div class="calculator__frame">
+						<div class="calculator__invest-box">
+							<div class="calculator__invest-price-box">
+								<label class="calculator__invest-price-text" for="invest-price">Сумма инвестиций</label>
+								<input class="calculator__invest-price" type="number" id="invest-price">
+							</div>
+
+							<div class="calculator__teraheshy-box">
+								<label class="calculator__teraheshy-text" for="teraheshy">Терахешы</label>
+								<input class="calculator__teraheshy" id="teraheshy">
+							</div>
+						</div>
+						<div class="calculator__range">
+							<input type="range" min="0" max="9000" value="0" step="10">
+						</div>
+						<div class="calculator__currency-rate">
+							<div class="calculator__current-rate"></div>
+							<div class="calculator__second-rate"></div>
+						</div>
+						<div class="calculator__currency-price">
+							<div class="calculator__first-currency"></div>
+							<div class="calculator__second-currency"></div>
+						</div>
+					</div>
 					<div class="calculator__report"></div>
 					<div class="calculator__price"></div>
-				</div>
+				</form>
 				<div class="calculator__about calculator__about--bot">Этот прогноз является ориентировочным и не включает
 					перепродажу
 					альткойнов и
