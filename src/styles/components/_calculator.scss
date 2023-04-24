@@ -108,6 +108,25 @@
 	&__range {
 		input {
 			width: 100%;
+			outline: none;
+			appearance: none;
+			background: #ECEDEE;
+			height: 6px;
+			border-radius: 10px;
+
+			&::-webkit-slider-thumb {
+				width: 15px;
+				height: 15px;
+				background: #DCFC34;
+				border-radius: 50%;
+				appearance: none;
+				cursor:pointer;
+				position: relative;
+				display: flex;
+				outline:15px solid #565656;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
+
+			}
 		}
 	}
 }
