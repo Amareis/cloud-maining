@@ -1028,7 +1028,7 @@ template {
 	border: 8px solid #4B4C5A;
 	box-shadow: 0 4px 8px #0000002e;
 	top: -12px !important;
-	cursor: pointer
+	cursor: pointer !important;
 }
 
 .noUi-touch-area,
