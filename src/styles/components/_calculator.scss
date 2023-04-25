@@ -21,7 +21,12 @@
 
 		@media (max-width: 425px) {
 			margin-bottom: 25px;
-	}
+		}
+
+
+		@media (max-width: 375px) {
+			font-size: 14px;
+		}
 	}
 
 	&__about--bot {
@@ -31,7 +36,8 @@
 		margin-bottom: 0;
 	}
 
-	&__about, &__about--bot {
+	&__about,
+	&__about--bot {
 		font-size: 15px;
 		line-height: 24px;
 	}
@@ -50,6 +56,14 @@
 			grid-template-rows: 420px 320px 290px;
 			gap: 15px;
 			margin-bottom: 25px;
+		}
+
+		@media (max-width: 425px) {
+			grid-template-rows: 450px 320px 305px;
+		}
+
+		@media (max-width: 375px) {
+			grid-template-rows: 450px 320px 305px;
 		}
 	}
 
@@ -111,6 +125,10 @@
 		@media (max-width: 768px) {
 			margin-bottom: 50px;
 		}
+
+		@media (max-width: 375px) {
+			gap: 0 10px;
+		}
 	}
 
 	&__invest-price-text,
@@ -121,6 +139,10 @@
 
 		@media (max-width: 768px) {
 			font-size: 15px;
+		}
+
+		@media (max-width: 375px) {
+			font-size: 14px;
 		}
 	}
 
@@ -155,7 +177,6 @@
 		grid-column-start: 1;
 		grid-column-end: 3;
 		display: flex;
-		margin-bottom: 30px;
 
 		padding: 40px;
 		display: flex;
@@ -174,11 +195,9 @@
 		}
 
 		@media (max-width: 425px) {
-			margin-bottom: 25px;
 			align-items: flex-start;
 			gap: 25px 0;
 			height: 305px;
-
 		}
 	}
 
@@ -191,6 +210,11 @@
 
 		@media(max-width: 600px) {
 			margin-bottom: 25px;
+		}
+
+		@media(max-width: 375px) {
+			flex-direction: column;
+			width: 100%;
 		}
 
 	}
@@ -207,9 +231,14 @@
 		@media(max-width: 425px) {
 			font-size: 14px;
 		}
+
+		@media(max-width: 425px) {
+			text-align: center;
+		}
 	}
 
-	&__current-rate.active, &__second-rate.active {
+	&__current-rate.active,
+	&__second-rate.active {
 		background: #DCFC34;
 		color: #262626;
 	}
@@ -221,6 +250,10 @@
 		@media(max-width: 610px) {
 			flex-direction: column;
 			gap: 25px 0;
+		}
+
+		@media(max-width: 375px) {
+			gap: 10px 0;
 		}
 	}
 
@@ -347,7 +380,6 @@
 
 	&__price-btn {
 		padding: 19px 32px;
-		line-height: 1.2;
 
 		@media(max-width: 768px) {
 			margin-top: auto;
@@ -390,9 +422,7 @@
 		}
 	}
 
-	&__thumb {
-
-	}
+	&__thumb {}
 
 	&__progress {
 		width: 0;
@@ -433,6 +463,8 @@
 	top: -12px !important;
 }
 
-.noUi-touch-area, .noUi-handle:before, .noUi-handle:after {
+.noUi-touch-area,
+.noUi-handle:before,
+.noUi-handle:after {
 	display: none !important;
 }

@@ -32,6 +32,10 @@
 		font-size: 30px;
 		line-height: 34px;
 	}
+
+	@media (max-width: 375px) {
+		font-size: 22px;
+	}
 }
 
 .btn {
@@ -43,4 +47,8 @@
 	font-size: 18px;
 	text-align: center;
 	height: 60px;
+
+	@media (max-width: 375px) {
+		font-size: 16px;
+	}
 }

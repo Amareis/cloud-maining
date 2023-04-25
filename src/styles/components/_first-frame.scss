@@ -16,7 +16,7 @@
 .first-frame {
 	padding-top: 60px;
 	max-width: 1920px;
-	margin: 0 auto 85px ;
+	margin: 0 auto 85px;
 	overflow-x: clip;
 
 	@media (max-width: 425px) {
@@ -84,6 +84,11 @@
 		@media (max-width: 768px) {
 			font-size: 60px;
 			line-height: 62px;
+		}
+
+		@media (max-width: 375px) {
+			font-size: 54px;
+
 		}
 	}
 
