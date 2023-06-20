@@ -23,7 +23,7 @@ export default defineConfig({
 			"@": fileURLToPath(new URL("./src", import.meta.url)),
 		},
 	},
-	base: '/cloud-maning/',
+	base: '/cloud-mining/',
 	build: {
 		rollupOptions: {
 			input: {
