@@ -41,6 +41,8 @@ const asicConsumption = 3.5 * 24 //Kwt/day
 const asicProduct = 173 //doge/day
 const dogePrice = 0.1 //$/doge
 
+let contractLink = ''
+
 function update() {
   const investAmount = +slider.noUiSlider.get()
   investPriceElement.innerText = `$${investAmount}`
@@ -55,11 +57,9 @@ function update() {
 
   const dailyIncome = asicCount * asicProduct * dogePrice //$/day
   updateIncomes(investAmount, dailyIncome, electricityCostInUSDT)
+
+  contractLink = `mailto:mail@example.com?body=Здравствуйте, я хочу заключить контракт на $${investAmount} (${megahashes} мегахешей)&subject=Контракт на облачный майнинг`
 }
-
-update()
-
-slider.noUiSlider.on('update', update)
 
 function updateIncomes(investAmount, dailyIncome, cost) {
   const onePercent = investAmount / 100
@@ -81,3 +81,11 @@ function updateIncomes(investAmount, dailyIncome, cost) {
   costElements[0].innerText = investAmount.toFixed(0)
   costElements[1].innerText = `$${cost.toFixed(0)}`
 }
+
+function sendMail() {
+  window.open(contractLink, '_blank')
+}
+
+document.querySelector('.calculator__price-btn').addEventListener('click', sendMail)
+update()
+slider.noUiSlider.on('update', update)
