@@ -49,19 +49,19 @@
 				<div class="calculator__about">Просто укажите сумму инвестиций или количество единиц мощности
 					(мегахешей в секунду)
 				</div>
-				<form class="calculator__inner">
+				<div class="calculator__inner">
 					<div class="calculator__frame">
 						<div class="calculator__invest-box">
 							<div class="calculator__invest-price-box">
-								<div class="calculator__invest-price-text" for="invest-price">Сумма инвестиций</div>
-								<div class="calculator__invest-price">$9999</div>
+								<label class="calculator__invest-price-text" for="invest-price">Сумма инвестиций</label>
+								<div class="calculator__invest-price">$<input id="invest-price" type="number" min="100" max="100000"/></div>
 							</div>
 							<div class="calculator__equally">
 								<img src="/src/assets/images/equally.svg" alt="equally">
 							</div>
 							<div class="calculator__megahashes-box">
-								<div class="calculator__megahashes-text" for="megahashes">Мегахеши</div>
-								<div class="calculator__megahashes" id="megahashes">9</div>
+								<label class="calculator__megahashes-text" for="megahashes">Мегахеши</label>
+                <div class="calculator__megahashes" id="megahashes">10</div>
 							</div>
 						</div>
 						<div class="calculator__range calculator ">
@@ -130,7 +130,7 @@
 						</div>
 						<div class="calculator__price-btn btn">Заключить контракт</div>
 					</div>
-				</form>
+				</div>
 				<div class="calculator__about calculator__about--bot">Этот прогноз является ориентировочным и не включает
 					перепродажу
 					альткойнов и

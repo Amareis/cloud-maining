@@ -30,8 +30,14 @@ noUiSlider.create(slider, {
   }
 })
 
-const megahashesElement = document.getElementById("megahashes")
-const investPriceElement = document.querySelector(".calculator__invest-price")
+const megahashesDiv = document.getElementById("megahashes")
+const investPriceInput = document.getElementById("invest-price")
+
+investPriceInput.addEventListener("change", e => {
+  const val = +e.currentTarget.value
+  slider.noUiSlider.set(val)
+  update(val)
+})
 
 const asicCost = 7500 //$/asic
 const asicHashes = 9000 //Mh/sec
@@ -47,9 +53,8 @@ const commission = 0.3 //30%
 
 let contractLink = ''
 
-function update() {
-  const investAmount = +slider.noUiSlider.get()
-  investPriceElement.innerText = `$${investAmount}`
+function update(investAmount) {
+  investPriceInput.value = investAmount
 
   const asicCount = investAmount / asicCost
   const megahashes = asicCount * asicHashes //Mhs/sec
@@ -57,7 +62,7 @@ function update() {
   const electricityCost = asicConsumption * asicCount * kwtPrice // rub/day
   const electricityCostInUSDT = electricityCost * rublePrice * 30// $/month
 
-  megahashesElement.innerText = megahashes.toFixed(0)
+  megahashesDiv.innerText = megahashes.toFixed(0)
 
   const dailyIncome = asicCount * (asicDoges * dogePrice + asicLites * litePrice) * (1 - commission) //$/day
   updateIncomes(investAmount, dailyIncome, electricityCostInUSDT)
@@ -96,5 +101,8 @@ function sendMail() {
 }
 
 document.querySelector('.calculator__price-btn').addEventListener('click', sendMail)
-update()
-slider.noUiSlider.on('update', update)
+
+slider.noUiSlider.set(1000)
+update(+slider.noUiSlider.get())
+
+slider.noUiSlider.on('update', () => update(+slider.noUiSlider.get()))

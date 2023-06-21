@@ -136,14 +136,23 @@
 
 	&__invest-price,
 	&__megahashes {
+    display: flex;
 		font-weight: 700;
 		font-size: 46px;
 		line-height: 50px;
 		letter-spacing: -0.04em;
-		border: none;
 		background: #4B4C5A;
+    border: none;
 
     width: 200px;
+
+    & input {
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      border: none;
+      background: transparent;
+    }
 
 		@media (max-width: 900px) {
 			font-size: 30px;
