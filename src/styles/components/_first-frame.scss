@@ -3,6 +3,11 @@
 		max-height: 100%;
 }
 
+.coins {
+  margin-top: 24px;
+  max-width: 80%;
+}
+
 .first-frame {
 	padding-top: 60px;
 	max-width: 1920px;
@@ -68,17 +73,12 @@
 	&__title {
 		font-style: normal;
 		font-weight: 800;
-		font-size: 82px;
-		line-height: 80px;
+    font-size: 60px;
+    line-height: 62px;
 
-		@media (max-width: 768px) {
-			font-size: 60px;
-			line-height: 62px;
-		}
-
-		@media (max-width: 375px) {
+		@media (max-width: 762px) {
 			font-size: 54px;
-
+      line-height: 58px;
 		}
 	}
 
