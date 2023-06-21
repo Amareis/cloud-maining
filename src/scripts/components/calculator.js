@@ -38,8 +38,12 @@ const asicHashes = 9000 //Mh/sec
 const rublePrice = 1/84 //$/rub
 const kwtPrice = 4.5 //rub/Kwt
 const asicConsumption = 3.5 * 24 //Kwt/day
-const asicProduct = 173 //doge/day
-const dogePrice = 0.1 //$/doge
+const asicDoges = 164.481 //doge/day per one asic
+const dogePrice = 0.064 //$/doge
+const asicLites = 0.09138 //LTC/day per one asic
+const litePrice = 83.95 //$/LTC
+
+const commission = 0.3 //30%
 
 let contractLink = ''
 
@@ -55,7 +59,7 @@ function update() {
 
   megahashesElement.innerText = megahashes.toFixed(0)
 
-  const dailyIncome = asicCount * asicProduct * dogePrice //$/day
+  const dailyIncome = asicCount * (asicDoges * dogePrice + asicLites * litePrice) * (1 - commission) //$/day
   updateIncomes(investAmount, dailyIncome, electricityCostInUSDT)
 
   contractLink = `mailto:mail@example.com?body=Здравствуйте, я хочу заключить контракт на $${investAmount} (${megahashes} мегахешей)&subject=Контракт на облачный майнинг`
@@ -80,6 +84,11 @@ function updateIncomes(investAmount, dailyIncome, cost) {
   const costElements = document.querySelectorAll('.calculator__price-sum-count')
   costElements[0].innerText = investAmount.toFixed(0)
   costElements[1].innerText = `$${cost.toFixed(0)}`
+
+
+  const coursesElements = document.querySelectorAll('.calculator__currency')
+  coursesElements[0].innerText = `$${dogePrice.toFixed(3)}`
+  coursesElements[1].innerText = `$${litePrice.toFixed(2)}`
 }
 
 function sendMail() {
