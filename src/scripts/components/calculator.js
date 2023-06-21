@@ -17,10 +17,10 @@ const investPriceInput = document.getElementById("invest-price")
 
 const coursesInputs = document.querySelectorAll('.calculator__currency input')
 
-investPriceInput.addEventListener("change", e => {
+investPriceInput.addEventListener("input", e => {
   const val = +e.currentTarget.value
   slider.noUiSlider.set(val)
-  update()
+  update(val)
 })
 
 const asicCost = 7500 //$/asic
