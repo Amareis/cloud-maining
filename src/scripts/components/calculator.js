@@ -81,7 +81,7 @@ function sendMail() {
   window.open(contractLink, '_blank')
 }
 
-document.querySelector('.calculator__price-btn').addEventListener('click', sendMail)
+// document.querySelector('.calculator__price-btn').addEventListener('click', sendMail)
 
 slider.noUiSlider.on('update', () => update(+slider.noUiSlider.get()))
 
