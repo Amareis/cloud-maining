@@ -4,6 +4,7 @@ const path = require('path')
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  base: '/cloud-mining/',
 	resolve: {
 		alias: {
 			"@": fileURLToPath(new URL("./src", import.meta.url)),
