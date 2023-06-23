@@ -6,6 +6,12 @@ input[type='number'] {
   -moz-appearance: textfield !important;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .calculator {
 	margin-bottom: 60px;
 
@@ -57,13 +63,13 @@ input[type='number'] {
 		grid-template-columns: minmax(385px, 600px) minmax(235px, 385px);
 		grid-template-rows: 420px 155px;
 		gap: 15px;
-		margin-bottom: 30px;
+		//margin-bottom: 30px;
 
 		@media (max-width: 768px) {
 			grid-template-columns: 1fr;
 			grid-template-rows: 420px 320px 290px;
 			gap: 15px;
-			margin-bottom: 25px;
+			//margin-bottom: 25px;
 		}
 
 		@media (max-width: 425px) {

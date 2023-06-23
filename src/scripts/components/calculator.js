@@ -127,9 +127,3 @@ switchRates(currentRate)
 
 slider.noUiSlider.set(1000)
 update()
-
-function getDocumentHeight() {
-    location.hash = document.body.offsetHeight
-}
-
-setInterval(getDocumentHeight, 200)
