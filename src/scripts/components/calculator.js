@@ -77,11 +77,7 @@ function updateIncomes(investAmount, dailyIncome, cost) {
   costElements[1].innerText = `$${cost.toFixed(0)}`
 }
 
-function sendMail() {
-  window.open(contractLink, '_blank')
-}
-
-// document.querySelector('.calculator__price-btn').addEventListener('click', sendMail)
+// document.querySelector('.calculator__price-btn').addEventListener('click', () => window.open(contractLink, '_blank')))
 
 slider.noUiSlider.on('update', () => update(+slider.noUiSlider.get()))
 
@@ -131,3 +127,9 @@ switchRates(currentRate)
 
 slider.noUiSlider.set(1000)
 update()
+
+function getDocumentHeight() {
+    location.hash = document.body.offsetHeight
+}
+
+setInterval(getDocumentHeight, 200)
