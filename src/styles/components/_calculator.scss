@@ -87,6 +87,7 @@ input[type='number'] {
 	}
 
 	&__frame {
+    overflow: hidden;
     padding: 60px 40px 20px;
     display: flex;
     flex-direction: column;
